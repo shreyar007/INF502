@@ -66,7 +66,7 @@ Date:   Wed Aug 14 23:08:47 2019 -0700
      
 =>  "creating all files" - "Added a draft of A.py"  
          - "Making a small change here" (MASTER branch)
-         -  "Adding some more knowledge to the function" (Math branch)
+         - "Adding some more knowledge to the function" (Math branch)
 
 ```
 
@@ -103,7 +103,7 @@ Below is a tree structure. It's basically a commit tree with a fork. We can see 
 3. Use `git diff BRANCH_NAME` to view the differences from a branch and the current branch. Summarize the difference from master to the other branch.
 
 ```
-We have the A.py and B.py file. The function has code to caluclate a sum in the master branch, but just prints text in the math branch. Also, in the math branch, it has an extra line that it reeceives of a different file. 
+We have the A.py and B.py file. The function has code to caluclate a sum in the master branch, but just prints text in the math branch. Also, in the math branch, it has an extra line that it reeceives from a different file. 
 
 diff --git a/B.py b/B.py
 index e69de29..c63f94c 100644
