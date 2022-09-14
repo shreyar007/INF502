@@ -62,12 +62,17 @@ Author: Igor Steinmacher <igorsteinmacher@gmail.com>
 Date:   Wed Aug 14 23:08:47 2019 -0700
 
      Creating all files (all empty)
+     
+     
+=>  "creating all files" - "Added a draft of A.py"  
+         - "Making a small change here" (MASTER branch)
+         -  "Adding some more knowledge to the function" (Math branch)
 
 ```
 
 2. Try `git log --graph --all` to see the commit tree. Paste the result here and write a paragraph to provide an interpretation of what you found.
 ```
-Above is a tree structure. We can see the adiition of a draft named A.py
+Below is a tree structure. It's basically a commit tree with a fork. We can see the adiition of a draft named A.py
 
 *   commit 967c07c791237687e0679681a74600b3b716ec9a (master)
 |\  Merge: 18931d1 e3c629d
@@ -98,7 +103,7 @@ Above is a tree structure. We can see the adiition of a draft named A.py
 3. Use `git diff BRANCH_NAME` to view the differences from a branch and the current branch. Summarize the difference from master to the other branch.
 
 ```
-We have the A.py and B.py file.
+We have the A.py and B.py file. The function has code to caluclate a sum in the master branch, but just prints text in the math branch. Also, in the math branch, it has an extra line that it reeceives of a different file. 
 
 diff --git a/B.py b/B.py
 index e69de29..c63f94c 100644
@@ -111,8 +116,11 @@ index e69de29..c63f94c 100644
 4. Write a command sequence to merge the non-master branch into `master`.
 
 ```
-git checkout master
+
+git commit --all -m "commiting changes before merging math branch into master"
 git merge math
+git branch -d math
+
 
 ```
 
@@ -120,22 +128,21 @@ git merge math
 5. Write a command (or sequence) to (i) create a new branch called `math` (from the `master`) and (ii) change to this branch.
 
 ```
-git checkout master
-git branch math (fatal: a branch named 'math' already exists)
-git checkout math
-
+git checkout -b math master
 ```
    
 6. Edit B.py adding the following source code below the content you have there.
 ```
+sudo open -e B.py
+
+// writing the below statements
 print 'I know math, look:'
 print 2+2
 ```
 
 7. Write a command (or sequence) to commit your changes.
 ```
-git add B.py
-git commit -m "addition of two lines to B.py on math branch"
+git commit --all -m "addition of two lines to B.py"
 
 ```
 
@@ -144,17 +151,15 @@ git commit -m "addition of two lines to B.py on math branch"
 print 'hello world!'
 
 git checkout master
-git add B.py
+sudo open -e B.py
 git commit -m "adding one line to B.py on master branch"
 ```
 
 9. Write a command sequence to merge the `math` branch into `master` and describe what happened.
 ```
-Already up to date 
-
-git checkout master 
 git merge math
 
+The merge has failed since there is a merge conflict in B.py (since it had been edited in both the branches(main and math), a merge conflict arises)
 ```
    
 10. Write a set of commands to abort the merge.
@@ -165,7 +170,27 @@ git merge --abort
    
 11. Now repeat item 9, but proceed with the manual merge (editing B.py). All implemented methods are needed. Explain your procedure.
 ```
-No errors are seen. None of the files are copied.
+When merging, I encountered an error. So I opened the B.py file using 'sudo open -e B.py' and it consisted of the below;
+
+# Another file that will receive a line of code... at least.
+<<<<<<< HEAD
+print 'hello world!'
+
+=======
+print 'I know math, look:'
+print 2+2
+>>>>>>> math
+
+Therefore I made the following changes to the file;
+
+# Another file that will receive a line of code... at least.
+print 'hello world!'
+print 'I know math, look:'
+print 2+2
+
+Then, the following steps were done;
+    - added the new file to the commit by using git add B.py
+    - comitted using: git commit -all -m 'resolved conflicts in B.py'
 
 ```
 
