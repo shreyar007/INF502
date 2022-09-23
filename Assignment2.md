@@ -21,6 +21,10 @@ print(pythagoreanTheorem(2, 2))
      def pythagoreanTheorem(length_a, length_b):
        hypotenuse = (length_a**2 + length_b**2)**(1/2)
        return hypotenuse
+
+## *Code-Explanation*
+
+The above code demonstarates the function of Pythagorean Theorem. The mathematical formula used above is to find the hypotenuse of the right angled triangle.  The sides of the triangle "a" and "b" are used in this function to calculate the hypotenuse which are taken as the function arguments. In the function above returns the hypotenuse value, later we call the function with our values for "a" and "b".
     
 ## *Output*
 
@@ -56,7 +60,11 @@ print(list_mangler([1, 2, 3, 4]))
                       new_inp = no* 3
                   new_l.append(new_inp)
           return new_l
- 
+
+## *Code-Explanation*
+
+The above code demonstarates the function called list_mangler. The function takes a list as an argument. For each element in the list we check whether the element is an integer. If true, then we check if the number is even. If true, then we double that element and append it to the new list. Elsewise, if the element is odd we triple that number and append it to the new list. Lastly, we return the new list.
+
  ## *Output*  
 
      print (list_mangler([1,2,3,4]))
@@ -79,7 +87,8 @@ print(grade_calc([100, 90, 80, 95], 2)) # drops the 2 lowest grades (80 and 90)
 'A'
 ```
 ## *Source-Code*
-         
+     
+     import statistics
      def grade_calc(grades_in, to_drop):
         grades_in.sort(reverse = True)
         not_dropped = grades_in[:len(grades_in)-to_drop]
@@ -97,7 +106,11 @@ print(grade_calc([100, 90, 80, 95], 2)) # drops the 2 lowest grades (80 and 90)
             letter_grade = 'F'
 
         return letter_grade
-        
+
+## *Code-Explanation*
+
+The above code demonstarates the function called grade_calc. An integer list and lowest grade to drop is taken as an argument. Firstly we sort the given integer list in descending order. Next with the help of list indexing, only the elements that aren't supposed to be dropped are taken into the variable not_dropped. The variable final calculates the avergae/mean of the marks obtained. With the help of if/else/elif statements we check which conditions hold true for that particular final. Based on which loop it enters the letter_grade is returned for the same.
+
 ## *Output*  
 
      print (grade_calc([100,90,80,95],2))
@@ -137,6 +150,10 @@ print(odd_even_filter([71, 39, 98, 79, 5, 89, 50, 90, 2, 56]))
 
            return(even_list, odd_list)
  
+ ## *Code-Explanation*
+
+The above code demonstarates the function called odd_even_filter. The function argument is a list of numbers. We itertate through the list. For each element in the list we check whether the element is odd or even. If element is odd we append it to the odd_list. Whereas if the element is found to be even, we will append it to the even_list. Lastly the result returned is a tuple of both the even and odd lists.
+
  ## *Output*  
 
      print (odd_even_filter([1, 2, 3, 4, 5, 6, 7, 8, 9]))
