@@ -23,13 +23,13 @@ print(pythagoreanTheorem(2, 2))
     
 ## *Output*
 
-     >>> pythagoreanTheorem(2,2)
+     print (pythagoreanTheorem(2,2))
      2.8284271247461903
      
-     >>> pythagoreanTheorem(5,4) 
+     print (pythagoreanTheorem(5,4)) 
      6.4031242374328485
 
-     >>> pythagoreanTheorem(12,16)
+     print (pythagoreanTheorem(12,16))
      20
      
 
@@ -58,13 +58,13 @@ print(list_mangler([1, 2, 3, 4]))
  
  ## *Output*  
 
-     >>> list_mangler([1,2,3,4])
+     print (list_mangler([1,2,3,4]))
      [3, 4, 9, 8]
 
-     >>> list_mangler([5,7,1,9])
+     print (list_mangler([5,7,1,9]))
      [15, 21, 3, 27]
 
-     >>> ist_mangler([15,3,-19,6])
+     print (list_mangler([15,3,-19,6]))
      [45, 9, -57, 12]
 
 **3. Write a function with the following signature:** `grade_calc(grades_in, to_drop)`.
@@ -99,14 +99,14 @@ print(grade_calc([100, 90, 80, 95], 2)) # drops the 2 lowest grades (80 and 90)
         
 ## *Output*  
 
-     >>> grade_calc([100,90,80,95],2)
-     'A'
+     print (grade_calc([100,90,80,95],2))
+     A
 
-     >>> grade_calc([78,30,12,8],0)
-     'F'
+     print (grade_calc([78,30,12,8],0))
+     F
 
-     >>> grade_calc([78,90,52,89],1)
-     'B'
+     print (grade_calc([78,90,52,89],1))
+     B
 
 
 **4. Write a function with the following signature:** `odd_even_filter(numbers)`.
@@ -138,11 +138,11 @@ print(odd_even_filter([71, 39, 98, 79, 5, 89, 50, 90, 2, 56]))
  
  ## *Output*  
 
-     >>> odd_even_filter([1, 2, 3, 4, 5, 6, 7, 8, 9])
+     print (odd_even_filter([1, 2, 3, 4, 5, 6, 7, 8, 9]))
      ([2, 4, 6, 8], [1, 3, 5, 7, 9])
 
-     >>> odd_even_filter([3, 9, 43, 7])
+     print (odd_even_filter([3, 9, 43, 7]))
      ([], [3, 9, 43, 7])
 
-     >>> dd_even_filter([71, 39, 98, 79, 5, 89, 50, 90, 2, 56])
+     print (dd_even_filter([71, 39, 98, 79, 5, 89, 50, 90, 2, 56]))
      ([98, 50, 90, 2, 56], [71, 39, 79, 5, 89])
