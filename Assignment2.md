@@ -57,7 +57,7 @@ print(list_mangler([1, 2, 3, 4]))
                   if no % 2 == 0:
                       new_inp = no * 2
                   else:
-                      new_inp = no* 3
+                      new_inp = no * 3
                   new_l.append(new_inp)
           return new_l
 
