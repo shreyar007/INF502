@@ -3,6 +3,7 @@
 * **INDIVIDUAL ASSIGNMENT**
 * **Deadline**: Sept-27th 11:59PM
 * **Value**: 100 points counted towards Homework category
+* **Link to the code run on Jupyter Notebook for the answers below**: [click here]()
 
 ## Problems
 
