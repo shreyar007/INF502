@@ -253,3 +253,71 @@ The below souce code demonstrates the working demonstration of the code along wi
      main()
 ```
 
+## Problem Solution Strategies
+
+1. First step I took towards solving the programming assignment was to break up the problem into smaller subsections. I formulated functions for each of the functionalities. The description for each of the functions is described in the source code.
+2. The following outcomes are met in the code;
+   (i) start by getting the similarity functions (one at a time) working correctly, and test them using string literals; 
+   (ii) add the file input capability; 
+   (iii) add the interactive elements, to gather parameters from the user. Finally, add your exception handling using try/except blocks and test your system thoroughly to make sure you're catching all exceptions that can be raised by your code. 
+   (iv) Do your best to make the interactive elements of the program look aesthetically pleasing.
+
+## Outputs
+```
+Chain1 : ACTGATCAC
+Chain2 : TTAGCTCGA
+```
+```
+Enter the line_one of the text file: 
+chain1.txt
+Enter the line_two of the text file: 
+chain2.txt
+Your choices are as follows:
+1. Maximum-Matches
+2. Longest-Continuous-Match 
+
+Enter your choice from [1 or 2]: 1
+Enter the maximum spaces for the Chain shift: 3
+
+
+----- The formulated output is as follows -----
+
+When maximum shift is of 3 spaces.. 
+The max no. of matches is: 4
+
+ (i.e- This occurs is when the first chain is shifted 2 spaces to the left! )
+
+The resulting chain combination is as follows: 
+ACTGATCAC--
+--TTAGCTCGA
+```
+
+```
+Enter the line_one of the text file: 
+chain1.txt
+Enter the line_two of the text file: 
+chain2.txt
+Your choices are as follows:
+1. Maximum-Matches
+2. Longest-Continuous-Match 
+
+Enter your choice from [1 or 2]: 2
+Enter the maximum spaces for the Chain shift: 2
+
+
+----- The formulated output is as follows -----
+
+When maximum shift is of 2 spaces.. 
+
+The longest contiguous matching chain length is: 2
+
+ This occurs is when there is no shift!!!
+
+The original chains are as follows: 
+ACTGATCAC
+TTAGCTCGA
+```
+
+## Hurdles and Benefits
+1. Since I had prior experience in working with Python, I found the first part of finding the matches in the code relatively simpler as comapred to the contiguous chain. For the contiguous chain, I made a temporary counter that only counted matches that occurred consecutively (if a match wasn't found, then value=0). I came to the conclusion that using the shift number's sign to denote left/right shifts would make implementation the simplest. The computer code must attempt both left and right shifts if the user enters a maximum shift of 3.nThe chains may be kept at the same length and the shifting procedure could avoid producing any matches by adding "-" to the left and right of the chains. Finding the maximum match was rather easy after I had my two methods for how to count matches and a function for rearranging chains. It just took a loop through all of the potential shifts for me to choose the one that produced the most matches and capture the necessary data from that shift.
+2. One of the hurdles that I faced while coding this assignment was to figure out how to keep the code from "exiting" when it came across an error. The error handling approach really helped me handle all the errors effictively.
