@@ -3,7 +3,7 @@
 * **INDIVIDUAL ASSIGNMENT**
 * **Deadline**: Oct-11th 11:59PM
 * **Value**: 100 points counted towards Homework category
-* **Link to the code run on Jupyter Notebook(.py file) for the answers below**: [click here]()
+* **Link to the code run on Jupyter Notebook(.py file) for the answers below**: [click here](https://github.com/shreyar007/INF502/blob/main/code/INF502%20--%20Assignment3.py)
 
 **How to submit**: In your GitHub repository called *INF502* (same used for the HW assignments 1 and 2), create a file called *"Assignment3.md"* with the following content:
   1. The problem's specification (as provided below in this file);
