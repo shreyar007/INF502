@@ -28,7 +28,7 @@ After the user adds the values for the wallets, your application should provide 
 * All together, these wallets have `$value` in them.
 * All together, the total value of these wallets is worth `$value` dimes.
 
-## Source Code
+## Source-Code
 ```
   # the below function defines the user input of the amount and its value amount
   def inp():
@@ -71,7 +71,7 @@ After the user adds the values for the wallets, your application should provide 
   wallet = inp()
   main(wallet)
 ```
-## Outputs
+## Output
 ```
   Enter the no.of amount you want to enter: 5
   Enter the amount of money: 1023
