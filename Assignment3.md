@@ -169,11 +169,21 @@ Make sure you do the appropriate communication with the user to get the necessar
       # if user input value is '4' then the below code is executed..      
       elif user_input == "4":
 
-        # getting user input for updated element entry
-          abbr = input('Enter the abbreviation of the element to change: ')
-          name = input('Enter the name of the element to change: ')
-          value = input('Enter the updated value for ' + name + "-- ")
-          periodic_table_ele[abbr][name] = value
+          # getting user input for updated element entry
+          symbol=input("Enter the symbol of the element to make chnages:")
+          while(True):
+          attribute=input("Which attribute do you want to change - 'name', 'number', 'row' or 'column'\nIf you don't wish to change anything enter 'EXIT'\n")
+          if attribute=="name":
+            periodic_table_ele[symbol][attribute]=input("Enter new name:  ")
+          elif attribute=="number":
+            periodic_table_ele[symbol][attribute]=input("Enter new atomic number: ")
+          elif attribute=="row":
+            periodic_table_ele[symbol][attribute]=input("Enter new row no:  ")
+          elif attribute== "column":
+            periodic_table_ele[symbol][attribute]=input("Enter new column no: ")
+          elif attribute=="EXIT":
+              break
+          print("Attributes for the element "+symbol+" are changed and is as follows:",periodic_table_ele[symbol])
 
       # if user input value is '5' then the below code is executed..      
       elif user_input == "5":
@@ -248,9 +258,9 @@ Make sure you do the appropriate communication with the user to get the necessar
   3
   Enter the element's abbreviated name: Shr
   Enter the element's name: Shreya
-  Enter the element's atomic no: 600
-  Enter the element's row no: 2
-  Enter the new element's column no: 5
+  Enter the element's atomic no: 680
+  Enter the element's row no: 3
+  Enter the new element's column no: 6
 
 
    ----------	PERIODIC TABLE OPERATIONS	----------
@@ -263,9 +273,13 @@ Make sure you do the appropriate communication with the user to get the necessar
   6. Load periodic table from JSON file
   7. Exit the program 
   4
-  Enter the abbreviation of the element to change: Shr
-  Enter the name of the element to change: Shreya
-  Enter the updated value for Shreya-- 560
+  Enter the symbol of the element to make chnages:Shr
+  Which attribute do you want to change - 'Name', 'number', 'row' or 'column'
+  If you don't wish to change anything enter 'EXIT'number
+  Enter new atomic number: 730
+  Attributes for the element Shr are changed and is as follows: {'name': 'Shreya', 'number': '730', 'row': '3', 'column': '6'}
+  Which attribute do you want to change - 'Name', 'number', 'row' or 'column'
+  If you don't wish to change anything enter 'EXIT'EXIT
 
 
    ----------	PERIODIC TABLE OPERATIONS	----------
@@ -279,126 +293,126 @@ Make sure you do the appropriate communication with the user to get the necessar
   7. Exit the program 
   2
   Enter the property name: (name, number, row, column)
-  name
-  The name of H is Hydrogen
-  The name of He is Helium
-  The name of Li is Lithium
-  The name of Be is Beryllium
-  The name of B is Boron
-  The name of C is Carbon
-  The name of N is Nitrogen
-  The name of O is Oxygen
-  The name of F is Fluorine
-  The name of Ne is Neon
-  The name of Na is Sodium
-  The name of Mg is Magnesium
-  The name of Al is Aluminum
-  The name of Si is Silicon
-  The name of P is Phosphorus
-  The name of S is Sulfur
-  The name of Cl is Chlorine
-  The name of Ar is Argon
-  The name of K is Potassium
-  The name of Ca is Calcium
-  The name of Sc is Scandium
-  The name of Ti is Titanium
-  The name of V is Vanadium
-  The name of Cr is Chromium
-  The name of Mn is Manganese
-  The name of Fe is Iron
-  The name of Co is Cobalt
-  The name of Ni is Nickel
-  The name of Cu is Copper
-  The name of Zn is Zinc
-  The name of Ga is Gallium
-  The name of Ge is Germanium
-  The name of As is Arsenic
-  The name of Se is Selenium
-  The name of Br is Bromine
-  The name of Kr is Krypton
-  The name of Rb is Rubidium
-  The name of Sr is Strontium
-  The name of Y is Yttrium
-  The name of Zr is Zirconium
-  The name of Nb is Niobium
-  The name of Mo is Molybdenum
-  The name of Tc is Technetium
-  The name of Ru is Ruthenium
-  The name of Rh is Rhodium
-  The name of Pd is Palladium
-  The name of Ag is Silver
-  The name of Cd is Cadmium
-  The name of In is Indium
-  The name of Sn is Tin
-  The name of Sb is Antimony
-  The name of Te is Tellurium
-  The name of I is Iodine
-  The name of Xe is Xenon
-  The name of Cs is Cesium
-  The name of Ba is Barium
-  The name of La is Lanthanum
-  The name of Ce is Cerium
-  The name of Pr is Praseodymium
-  The name of Nd is Neodymium
-  The name of Pm is Promethium
-  The name of Sm is Samarium
-  The name of Eu is Europium
-  The name of Gd is Gadolinium
-  The name of Tb is Terbium
-  The name of Dy is Dysprosium
-  The name of Ho is Holmium
-  The name of Er is Erbium
-  The name of Tm is Thulium
-  The name of Yb is Ytterbium
-  The name of Lu is Lutetium
-  The name of Hf is Hafnium
-  The name of Ta is Tantalum
-  The name of W is Wolfram
-  The name of Re is Rhenium
-  The name of Os is Osmium
-  The name of Ir is Iridium
-  The name of Pt is Platinum
-  The name of Au is Gold
-  The name of Hg is Mercury
-  The name of Tl is Thallium
-  The name of Pb is Lead
-  The name of Bi is Bismuth
-  The name of Po is Polonium
-  The name of At is Astatine
-  The name of Rn is Radon
-  The name of Fr is Francium
-  The name of Ra is Radium
-  The name of Ac is Actinium
-  The name of Th is Thorium
-  The name of Pa is Protactinium
-  The name of U is Uranium
-  The name of Np is Neptunium
-  The name of Pu is Plutonium
-  The name of Am is Americium
-  The name of Cm is Curium
-  The name of Bk is Berkelium
-  The name of Cf is Californium
-  The name of Es is Einsteinium
-  The name of Fm is Fermium
-  The name of Md is Mendelevium
-  The name of No is Nobelium
-  The name of Lr is Lawrencium
-  The name of Rf is Rutherfordium
-  The name of Db is Dubnium
-  The name of Sg is Seaborgium
-  The name of Bh is Bohrium
-  The name of Hs is Hassium
-  The name of Mt is Meitnerium
-  The name of Ds is Darmstadtium
-  The name of Rg is Roentgenium
-  The name of Cn is Copernicium
-  The name of Uut is Ununtrium
-  The name of Uuq is Ununquadium
-  The name of Uup is Ununpentium
-  The name of Uuh is Ununhexium
-  The name of Uus is Ununseptium
-  The name of Uuo is Ununoctium
-  The name of Shr is Shreya
+  row
+  The row of H is 1
+  The row of He is 1
+  The row of Li is 2
+  The row of Be is 2
+  The row of B is 2
+  The row of C is 2
+  The row of N is 2
+  The row of O is 2
+  The row of F is 2
+  The row of Ne is 2
+  The row of Na is 3
+  The row of Mg is 3
+  The row of Al is 3
+  The row of Si is 3
+  The row of P is 3
+  The row of S is 3
+  The row of Cl is 3
+  The row of Ar is 3
+  The row of K is 4
+  The row of Ca is 4
+  The row of Sc is 4
+  The row of Ti is 4
+  The row of V is 4
+  The row of Cr is 4
+  The row of Mn is 4
+  The row of Fe is 4
+  The row of Co is 4
+  The row of Ni is 4
+  The row of Cu is 4
+  The row of Zn is 4
+  The row of Ga is 4
+  The row of Ge is 4
+  The row of As is 4
+  The row of Se is 4
+  The row of Br is 4
+  The row of Kr is 4
+  The row of Rb is 5
+  The row of Sr is 5
+  The row of Y is 5
+  The row of Zr is 5
+  The row of Nb is 5
+  The row of Mo is 5
+  The row of Tc is 5
+  The row of Ru is 5
+  The row of Rh is 5
+  The row of Pd is 5
+  The row of Ag is 5
+  The row of Cd is 5
+  The row of In is 5
+  The row of Sn is 5
+  The row of Sb is 5
+  The row of Te is 5
+  The row of I is 5
+  The row of Xe is 5
+  The row of Cs is 6
+  The row of Ba is 6
+  The row of La is 8
+  The row of Ce is 8
+  The row of Pr is 8
+  The row of Nd is 8
+  The row of Pm is 8
+  The row of Sm is 8
+  The row of Eu is 8
+  The row of Gd is 8
+  The row of Tb is 8
+  The row of Dy is 8
+  The row of Ho is 8
+  The row of Er is 8
+  The row of Tm is 8
+  The row of Yb is 8
+  The row of Lu is 8
+  The row of Hf is 6
+  The row of Ta is 6
+  The row of W is 6
+  The row of Re is 6
+  The row of Os is 6
+  The row of Ir is 6
+  The row of Pt is 6
+  The row of Au is 6
+  The row of Hg is 6
+  The row of Tl is 6
+  The row of Pb is 6
+  The row of Bi is 6
+  The row of Po is 6
+  The row of At is 6
+  The row of Rn is 6
+  The row of Fr is 7
+  The row of Ra is 7
+  The row of Ac is 9
+  The row of Th is 9
+  The row of Pa is 9
+  The row of U is 9
+  The row of Np is 9
+  The row of Pu is 9
+  The row of Am is 9
+  The row of Cm is 9
+  The row of Bk is 9
+  The row of Cf is 9
+  The row of Es is 9
+  The row of Fm is 9
+  The row of Md is 9
+  The row of No is 9
+  The row of Lr is 9
+  The row of Rf is 7
+  The row of Db is 7
+  The row of Sg is 7
+  The row of Bh is 7
+  The row of Hs is 7
+  The row of Mt is 7
+  The row of Ds is 7
+  The row of Rg is 7
+  The row of Cn is 7
+  The row of Uut is 7
+  The row of Uuq is 7
+  The row of Uup is 7
+  The row of Uuh is 7
+  The row of Uus is 7
+  The row of Uuo is 7
+  The row of Shr is 3
 
 
    ----------	PERIODIC TABLE OPERATIONS	----------
@@ -1254,10 +1268,9 @@ Make sure you do the appropriate communication with the user to get the necessar
   Shr
   ------------
   name Shreya
-  number 600
-  row 2
-  column 5
-  Shreya 560
+  number 730
+  row 3
+  column 6
 
 
    ----------	PERIODIC TABLE OPERATIONS	----------
